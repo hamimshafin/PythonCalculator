@@ -17,17 +17,22 @@ days_per_week = float(input(f"{'Days per Week':.<{COLUMN_LENGTH}}: "))
 holidays_per_year = float(input(f"{'Holidays per Year':.<{COLUMN_LENGTH}}: "))
 vacation_days_per_year = float(input(f"{'Vacation Days per Year':.<{COLUMN_LENGTH}}: "))
 
+hours_working_day = float(input(f"{f'Numbers of hour in a working day':.<{COLUMN_LENGTH}}:"))  # user input
 
-def function1(a):
-    return a*8*260
 
-def function2(a,b,c):
-    return a*8*(260-b-c)
+def unadjusted_salary(salary_per_hour):
+    return salary_per_hour * hours_working_day * days_per_week*52
+
+
+def adjusted_salary(salary_per_hour, holidays_per_year, vacation_days_per_year):
+    return salary_per_hour * hours_working_day * (days_per_week*52 - holidays_per_year - vacation_days_per_year)
+
 
 DASH_LENGTH = 40
 print('=' * DASH_LENGTH)
-print(f"{'Unadjusted Salary':.<{COLUMN_LENGTH}}: $", round(function1(salary_per_hour),2))
-print(f"{'Adjusted Salary':.<{COLUMN_LENGTH}}: $", round(function2(salary_per_hour,holidays_per_year,vacation_days_per_year), 2))
+print(f"{'Unadjusted Salary':.<{COLUMN_LENGTH}}: $", round(unadjusted_salary(salary_per_hour), 2))
+print(f"{'Adjusted Salary':.<{COLUMN_LENGTH}}: $",
+      round(adjusted_salary(salary_per_hour, holidays_per_year, vacation_days_per_year), 2))
 
 DASH_LENGTH = 40
 print('=' * DASH_LENGTH)
