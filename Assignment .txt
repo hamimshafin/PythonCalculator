@@ -1,0 +1,20 @@
+========================================
+The Salary Calculator program
+========================================
+Salary per hour..........: 13.3
+Hours per Week...........: 40
+Days per Week............: 5
+Holidays per Year........: 6
+Vacation Days per Year...: 10
+========================================
+Unadjusted Salary........: $ 27664.0
+Adjusted Salary..........: $ 25961.6
+========================================
+Goodbye!
+
+Process finished with exit code 0
+
+
+The Assignment went good for me, I enjoyed using the python programming language.
+I liked the pairing assignment. Because it helps to work in a collaborative environment.
+
